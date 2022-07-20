@@ -2,7 +2,7 @@ export const gameBoard = {
     namespaced: true,
 
     state: {
-        ID: 'GB0001',
+        ID: '0',
         P1: false,
         P2: false,
         CurrentTurn: 'P1',
@@ -14,7 +14,6 @@ export const gameBoard = {
             P2: boolean
             CurrentTurn: string ('P1' | 'P2' | '')
             Game: array[9] ('x' | 'o' | '')
-            Status: boolean
             Winner: string ('P1' | 'P2' | 'Tie' | '')
         */
     },

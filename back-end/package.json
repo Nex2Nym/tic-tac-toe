@@ -21,8 +21,10 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.131.0",
     "@nestjs/common": "^9.0.3",
     "@nestjs/core": "^9.0.3",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/platform-socket.io": "^9.0.3",
     "@nestjs/websockets": "^9.0.3",
