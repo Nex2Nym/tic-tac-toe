@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { settings } from './modules/Settings'
-import { gameBoard } from './modules/GameBoard'
+import { mainStore } from './modules/mainStore'
+import { gameBoard } from './modules/gameBoard'
 
 Vue.use(Vuex)
 
@@ -15,7 +15,7 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    settings,
+    mainStore,
     gameBoard
   }
 })

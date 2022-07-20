@@ -2,7 +2,7 @@
 
 //store module with main data
 export const mainStore = {
-    namespace: true,
+    namespaced: true,
 
     state: {
         darkTheme: false

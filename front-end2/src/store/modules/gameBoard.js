@@ -1,13 +1,17 @@
+//imports
+
+//store module with the board data
 export const gameBoard = {
-    namespaced: true,
+    namespace: true,
 
     state: {
         ID: 'GB0001',
         P1: false,
         P2: false,
         CurrentTurn: 'P1',
-        Game: ['X', '', 'O', '', '', '', '', '', ''],
-        Winner: 'P2'
+        Game: ['', '', '', '', '', '', '', '', ''],
+        Status: false,
+        Winner: ''
         /*
             ID: integer
             P1: boolean
@@ -15,7 +19,7 @@ export const gameBoard = {
             CurrentTurn: string ('P1' | 'P2' | '')
             Game: array[9] ('x' | 'o' | '')
             Status: boolean
-            Winner: string ('P1' | 'P2' | 'Tie' | '')
+            Winner: string ('P1' | 'P2' | '')
         */
     },
 
@@ -25,12 +29,6 @@ export const gameBoard = {
                 return true
             else
                 return false
-        },
-        isP1Active(state){
-            return state.P1
-        },
-        isP2Active(state){
-            return state.P2
         },
         getCurrentTurn(state){
             return state.CurrentTurn
@@ -46,27 +44,7 @@ export const gameBoard = {
         }
     },
 
-    mutations: {
-        changeP1(state){
-            state.P1 = !state.P1
-        },
-        changeP2(state){
-            state.P2 = !state.P2
-        },
-        setWinner(state, winner){
-            state.Winner = winner
-        }
-    },
+    mutations: {},
 
-    actions: {
-        switchP1({commit}){
-            commit('changeP1')
-        },
-        switchP2({commit}){
-            commit('changeP2')
-        },
-        selectWinner({commit}, winner){
-            commit('setWinner', winner)
-        }
-    }
+    actions: {}
 }
